@@ -1,0 +1,4 @@
+INFO Scheduler started
+WARN High memory usage
+ERROR Backup failure on node-2
+CRITICAL Certificate expired

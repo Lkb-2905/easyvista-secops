@@ -1,0 +1,6 @@
+[
+  {"server": "srv-api", "status": "up", "severity": "low", "message": "OK"},
+  {"server": "srv-billing", "status": "down", "severity": "high", "message": "Timeout"},
+  {"server": "srv-ci", "status": "up", "severity": "medium", "message": "Queue large"},
+  {"server": "srv-mail", "status": "up", "severity": "low", "message": "OK"}
+]

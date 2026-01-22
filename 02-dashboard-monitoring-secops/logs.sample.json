@@ -1,0 +1,6 @@
+[
+  {"server": "srv-auth", "status": "up", "severity": "low", "message": "OK"},
+  {"server": "srv-db", "status": "down", "severity": "high", "message": "DB unreachable"},
+  {"server": "srv-web", "status": "up", "severity": "medium", "message": "Latency spike"},
+  {"server": "srv-backup", "status": "up", "severity": "low", "message": "OK"}
+]

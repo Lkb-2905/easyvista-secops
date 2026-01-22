@@ -1,0 +1,5 @@
+INFO Service started
+ERROR Auth failure detected
+CRITICAL Disk almost full
+INFO Health check ok
+FAILED Backup job
