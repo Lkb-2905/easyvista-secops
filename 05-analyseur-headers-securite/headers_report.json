@@ -1,0 +1,25 @@
+[
+  {
+    "url": "https://example.com",
+    "present": [
+      "x-content-type-options",
+      "referrer-policy"
+    ],
+    "missing": [
+      "strict-transport-security",
+      "x-frame-options",
+      "content-security-policy"
+    ]
+  },
+  {
+    "url": "https://github.com",
+    "present": [
+      "strict-transport-security",
+      "x-frame-options",
+      "x-content-type-options",
+      "content-security-policy",
+      "referrer-policy"
+    ],
+    "missing": []
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "domain": "easyvista.com",
+    "expires_at": "Mar  8 22:34:32 2026 GMT",
+    "days_left": 45,
+    "expires_soon": false
+  },
+  {
+    "domain": "github.com",
+    "expires_at": "Apr  5 23:59:59 2026 GMT",
+    "days_left": 73,
+    "expires_soon": false
+  },
+  {
+    "domain": "example.com",
+    "expires_at": "Mar 16 18:32:44 2026 GMT",
+    "days_left": 53,
+    "expires_soon": false
+  }
+]

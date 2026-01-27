@@ -24,7 +24,16 @@ def main() -> None:
     parser.add_argument("--input", default="domains.txt")
     parser.add_argument("--threshold", type=int, default=30)
     parser.add_argument("--output", default="ssl_report.json")
+    parser.add_argument("--offline", action="store_true", help="Mode demo sans reseau")
     args = parser.parse_args()
+
+    if args.offline:
+        with open("ssl_report.sample.json", "r", encoding="utf-8") as handle:
+            sample = json.load(handle)
+        with open(args.output, "w", encoding="utf-8") as handle:
+            handle.write(json.dumps(sample, ensure_ascii=True, indent=2))
+        print(f"Rapport ecrit: {args.output}")
+        return
 
     results = []
     with open(args.input, "r", encoding="utf-8") as handle:

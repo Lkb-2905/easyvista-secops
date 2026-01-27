@@ -1,3 +1,4 @@
+import argparse
 import json
 from collections import Counter
 
@@ -17,17 +18,35 @@ def summarize(logs: list) -> dict:
     }
 
 
+def cli_mode(path: str) -> None:
+    logs = load_logs(path)
+    summary = summarize(logs)
+    print("Total logs:", summary["total"])
+    print("Etat serveurs:", summary["status_counts"])
+    print("Criticite:", summary["severity_counts"])
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Dashboard SecOps (Streamlit ou CLI)")
+    parser.add_argument("--input", default="logs.sample.json")
+    parser.add_argument("--cli", action="store_true", help="Mode CLI sans Streamlit")
+    args = parser.parse_args()
+
+    if args.cli:
+        cli_mode(args.input)
+        return
+
     try:
         import streamlit as st
     except Exception:
         print("Streamlit requis. Installez: pip install streamlit")
+        print("Astuce: relancez avec --cli pour une demo.")
         return
 
     st.set_page_config(page_title="SecOps Monitoring", layout="wide")
     st.title("Dashboard de Monitoring SecOps")
 
-    path = st.text_input("Fichier JSON", "logs.sample.json")
+    path = st.text_input("Fichier JSON", args.input)
     try:
         logs = load_logs(path)
     except Exception as exc:

@@ -1,7 +1,7 @@
 import argparse
 import json
 import socket
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, List
 
 
@@ -25,7 +25,7 @@ def scan_host(host: str, ports: List[int], timeout: float) -> Dict[str, object]:
         "host": host,
         "open_ports": open_ports,
         "scanned_ports": ports,
-        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
     }
 
 
