@@ -1,0 +1,13 @@
+[project]
+name = "easyvista-secops"
+version = "0.1.0"
+description = "Outils SecOps pour demos et rapports rapides."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

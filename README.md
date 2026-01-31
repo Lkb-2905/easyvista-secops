@@ -1,5 +1,9 @@
 # EasyVista - SecOps (demo portfolio)
 
+![Tests](https://github.com/Lkb-2905/easyvista-secops/actions/workflows/tests.yml/badge.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+
 Objectif: proposer des outils SecOps simples a demonstrer, avec sorties
 faciles a capturer.
 
@@ -26,6 +30,13 @@ python check_ssl.py --offline --output ssl_report.json
 
 cd ../05-analyseur-headers-securite
 python headers_check.py --input urls.sample.txt --offline --output headers_report.json
+```
+
+## Installation rapide
+```
+python -m venv .venv
+source .venv/bin/activate  # ou .venv\\Scripts\\activate sous Windows
+pip install -r requirements.txt
 ```
 
 ## Captures conseillees
